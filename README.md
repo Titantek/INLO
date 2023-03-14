@@ -1,0 +1,2 @@
+# INLO
+software industrialization
