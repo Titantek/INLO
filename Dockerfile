@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN adduser nonroot
+RUN useradd -D nonroot
 
 USER nonroot
 
