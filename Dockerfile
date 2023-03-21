@@ -1,7 +1,6 @@
 FROM python:3.9
 
-RUN addgroup nonroot \
-    && adduser nonroot nonroot
+RUN adduser nonroot
 
 USER nonroot
 
