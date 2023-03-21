@@ -1,6 +1,11 @@
 FROM python:3.9
 
-RUN adduser --no-create-home nonroot
+RUN addgroup -S nonroot \
+    && adduser -S nonroot -G nonroot
+
+USER nonroot
+
+ENTRYPOINT ["id"]
 
 WORKDIR /code
 
@@ -13,8 +18,6 @@ COPY ./README.md /code/README.md
 COPY ./src /code/src
 
 COPY ./controller /code/controller
-
-USER nonroot
 
 RUN pip install /code
 
