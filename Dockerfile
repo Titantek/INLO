@@ -1,10 +1,4 @@
-FROM alpine:latest as security_provider
-RUN addgroup -S nonroot \
-    && adduser -S nonroot -G nonroot
-
 FROM python:3.9
-COPY --from=security_provider /etc/passwd /etc/passwd
-USER nonroot
 
 WORKDIR /code
 
