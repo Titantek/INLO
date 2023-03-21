@@ -1,4 +1,10 @@
+FROM alpine:latest
+RUN addgroup -S nonroot \
+    && adduser -S nonroot -G nonroot
+
 FROM python:3.9
+
+USER nonroot
 
 WORKDIR /code
 
