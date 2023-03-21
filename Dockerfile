@@ -1,8 +1,9 @@
 FROM python:3.9
 
-RUN adduser -D nonroot
+RUN adduser nonroot
 
 USER nonroot
+
 
 WORKDIR /code
 
