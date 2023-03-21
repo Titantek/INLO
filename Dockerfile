@@ -1,5 +1,9 @@
 FROM python:3.9
 
+RUN adduser --system --no-create-home nonroot
+
+USER nonroot
+
 WORKDIR /code
 
 COPY ./setup.py /code/setup.py
