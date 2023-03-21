@@ -4,9 +4,8 @@ RUN adduser nonroot
 
 USER nonroot
 
-ENTRYPOINT ["id"]
 
-WORKDIR /code
+WORKDIR /home/nonroot
 
 COPY ./setup.py /code/setup.py
 
